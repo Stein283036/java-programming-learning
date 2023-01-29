@@ -1,0 +1,2 @@
+00:06:32.709 [main] INFO  com.guhe.log.LogbackApp - this is an INFO message
+00:06:32.711 [main] ERROR com.guhe.log.LogbackApp - this is an ERROR message

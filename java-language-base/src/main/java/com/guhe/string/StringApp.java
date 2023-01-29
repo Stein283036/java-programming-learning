@@ -1,12 +1,72 @@
 package com.guhe.string;
 
+import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
+import java.util.Arrays;
+
 /**
  * @author njl
  * @date 2023/1/28
  */
 public class StringApp {
-	public static void main(String[] args) {
-		str1();
+	public static void main(String[] args) throws UnsupportedEncodingException {
+//		str1();
+//		str5();
+//		str8();
+		str9();
+	}
+
+	public static void str9() throws UnsupportedEncodingException {
+		byte[] b1 = "Hello".getBytes(); // 按系统默认编码转换，不推荐
+		byte[] b2 = "Hello".getBytes("UTF-8"); // 按UTF-8编码转换
+		byte[] b3 = "Hello".getBytes("GBK"); // 按GBK编码转换
+		byte[] b4 = "Hello".getBytes(StandardCharsets.UTF_8); // 按UTF-8编码转换
+		// 一个中文占 三 个字节
+		byte[] b5 = "这是中文".getBytes(StandardCharsets.UTF_8); // 按UTF-8编码转换
+		byte[] b6 = "这是中文".getBytes(); // 按UTF-8编码转换
+	}
+
+	public static void str8() {
+		// 使用trim()方法可以移除字符串首尾空白字符。空白字符包括空格，\t，\r，\n
+		System.out.println("    \thow are you\r\n   ".trim());
+		; // "Hello"
+		// isEmpty()来判断字符串是否为空
+		System.out.println("".isEmpty());
+		System.out.println(" ".isEmpty());
+		// 替换子串
+		String s = "hello";
+		s.replace('l', 'w'); // "hewwo"，所有字符'l'被替换为'w'
+		s.replace("ll", "~~"); // "he~~o"，所有子串"ll"被替换为"~~"
+		// 分割字符串
+		String str = "A,B,C,D";
+//		String[] split = str.split("\\,");
+		String[] split = str.split(",");
+		System.out.println("split = " + Arrays.toString(split));
+		// 拼接字符串
+		String[] arr = {"A", "B", "C"};
+		String join = String.join("***", arr);
+		System.out.println("join = " + join);
+		// 格式化字符串
+		// %s：显示字符串；
+		//%d：显示整数；
+		//%x：显示十六进制整数；
+		//%f：显示浮点数。
+	}
+
+	public static void str7() {
+		// 是否包含子串:
+		"Hello".contains("ll"); // true
+		// 搜索子串的更多的例子：
+		"Hello".indexOf("l"); // 2
+		"Hello".lastIndexOf("l"); // 3
+		"Hello".startsWith("He"); // true
+		"Hello".endsWith("lo"); // true
+		// 提取子串的例子：
+		"Hello".substring(2); // "llo"
+		"Hello".substring(2, 4); // "ll"
+	}
+
+	public static void str6() {
 		String str = "helloworld";
 		char[] data = str.toCharArray();// 将字符串转为数组
 		for (int x = 0; x < data.length; x++) {
@@ -15,6 +75,19 @@ public class StringApp {
 			System.out.print(data[x] + "  ");
 		}
 		System.out.println(new String(data));
+	}
+
+	public static void str5() {
+		String s1 = "hello";
+		// toLowerCase() 的 返回结果 return new String(result, 0, len + resultOffset);
+		String s2 = "HELLO".toLowerCase();
+		System.out.println(s1);
+		System.out.println(s2);
+		if (s1 == s2) {
+			System.out.println("s1 == s2");
+		} else {
+			System.out.println("s1 != s2");
+		}
 	}
 
 	public static void str1() {
