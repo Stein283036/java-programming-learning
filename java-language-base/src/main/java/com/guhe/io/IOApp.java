@@ -1,8 +1,6 @@
 package com.guhe.io;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.util.Scanner;
 
 /**
@@ -14,20 +12,41 @@ public class IOApp {
 //		io1();
 //		io2();
 //		io3();
+//		io4();
+		io5();
 	}
 
 	/**
 	 * 基于字符流读取纯文本文件（字符文件）
 	 */
 	public static void io5() {
-
+		try (BufferedReader br = new BufferedReader(new FileReader("D:\\JavaProjects\\java-programming-learning\\java-language-base\\src\\main\\java\\com\\guhe\\io\\Java 语言基础.md"));
+		     BufferedWriter bw = new BufferedWriter(new FileWriter("D:\\JavaProjects\\java-programming-learning\\java-language-base\\src\\main\\java\\com\\guhe\\io\\Java 语言基础 Copy.md"))
+		) {
+			char[] buf = new char[8096];
+			int readCount;
+			while ((readCount = br.read(buf)) != -1) {
+				bw.write(buf, 0, readCount);
+			}
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 	/**
 	 * 基于字节流读取二进制文件（音频、视频、图片等）
 	 */
 	public static void io4() {
-		
+		try (FileInputStream fis = new FileInputStream("D:\\JavaProjects\\java-programming-learning\\java-language-base\\src\\main\\java\\com\\guhe\\io\\img.png");
+		     FileOutputStream fos = new FileOutputStream("D:\\JavaProjects\\java-programming-learning\\java-language-base\\src\\main\\java\\com\\guhe\\io\\img Copy.png")) {
+			byte[] buffer = new byte[2048];
+			int readCount;
+			while ((readCount = fis.read(buffer)) != -1) {
+				fos.write(buffer, 0, readCount);
+			}
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 	/**
