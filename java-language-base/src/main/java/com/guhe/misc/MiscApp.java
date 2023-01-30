@@ -10,7 +10,21 @@ public class MiscApp {
 //		misc4();
 //		misc5();
 //		misc6();
-		misc7();
+//		misc7();
+		misc8();
+	}
+
+	/**
+	 * 包装类的缓存机制
+	 */
+	public static void misc8() {
+		Integer i1 = 100;
+		Integer i2 = 100;
+		System.out.println(i1 == i2);
+
+		Integer i3 = 200;
+		Integer i4 = 200;
+		System.out.println(i3 == i4);
 	}
 
 	public static void misc7() {

@@ -13,7 +13,37 @@ public class StringApp {
 //		str1();
 //		str5();
 //		str8();
-		str9();
+//		str9();
+//		str10();
+		str11();
+	}
+
+	public static void str11() {
+		String string = "abc123adb23456aa";
+		System.out.println(string);//abc123adb23456aa
+		System.out.println(string.replace('a', 'A'));
+		System.out.println(string.replaceFirst("\\d", "ABC"));
+		System.out.println(string.replaceAll("\\d", "ABC"));
+
+		//使用replace将a替换成H
+		System.out.println(string.replace("a", "H"));//Hbc123Hdb23456HH
+		//使用replaceFirst将第一个a替换成H
+		System.out.println(string.replaceFirst("a", "H"));//Hbc123adb23456aa
+		//使用replace将a替换成H
+		System.out.println(string.replaceAll("a", "H"));//Hbc123Hdb23456HH
+
+		//使用replaceFirst将第一个数字替换成H
+		System.out.println(string.replaceFirst("\\d", "H"));//abcH23adb23456aa
+		//使用replaceAll将所有数字替换成H
+		System.out.println(string.replaceAll("\\d", "H"));//abcHHHadbHHHHHaa
+	}
+
+	public static void str10() {
+		// 调用 intern 方法，会看字符串常量冲中是否有和该对象相等的字符串，通过 equals 比较，
+		// 如果有，则返回池中对象的引用，否则将该对象添加到池中并返回池中的引用
+		String str1 = new String("HelloWorld").intern();
+		String str2 = "HelloWorld";
+		System.out.println(str1 == str2); // true
 	}
 
 	public static void str9() throws UnsupportedEncodingException {
