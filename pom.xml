@@ -11,7 +11,7 @@
 
     <modules>
         <module>java-language-base</module>
-        <module>java-language-pro</module>
+        <module>java-language-guru</module>
     </modules>
 
     <properties>

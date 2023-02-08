@@ -1,4 +1,4 @@
-package com.guhe.net;
+package com.guhe.net.socket;
 
 import java.net.UnknownHostException;
 
