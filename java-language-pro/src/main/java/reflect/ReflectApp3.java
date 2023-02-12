@@ -1,4 +1,4 @@
-package com.guhe.reflect;
+package reflect;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -41,7 +41,7 @@ public class ReflectApp3 {
 	 * 反射多态
 	 */
 	public static void m4() throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-		Class<?> cls = Class.forName("com.guhe.reflect.Flyable");
+		Class<?> cls = Class.forName("reflect.Flyable");
 		Method fly = cls.getMethod("fly");
 		fly.invoke(new Fly1());
 		fly.invoke(new Fly2());

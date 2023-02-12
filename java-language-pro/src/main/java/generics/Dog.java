@@ -1,4 +1,4 @@
-package com.guhe.generics;
+package generics;
 
 import java.io.Serializable;
 
