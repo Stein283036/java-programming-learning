@@ -1,12 +1,25 @@
 package com.guhe.generics;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * @author njl
  * @date 2023/2/9
  */
 public class GenericsApp2 {
 	public static void main(String[] args) {
-		g1();
+//		g1();
+		g2();
+	}
+
+	public static void g2() {
+		List<?>[] lsa = new List<?>[10]; // OK, array of unbounded wildcard type.
+		Object[] oa = lsa;
+		List<Integer> li = new ArrayList<>();
+		li.add(3);
+		oa[1] = li; // Correct.
+		Integer i = (Integer) lsa[1].get(0); // OK
 	}
 
 	public static void g1() {
