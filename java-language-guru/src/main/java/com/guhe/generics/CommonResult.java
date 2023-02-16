@@ -1,4 +1,4 @@
-package generics;
+package com.guhe.generics;
 
 /**
  * @author njl

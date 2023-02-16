@@ -1,4 +1,4 @@
-package reflect;
+package com.guhe.reflect;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

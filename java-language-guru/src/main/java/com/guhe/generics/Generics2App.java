@@ -7,7 +7,7 @@ import java.util.List;
  * @author njl
  * @date 2023/2/9
  */
-public class GenericsApp2 {
+public class Generics2App {
 	public static void main(String[] args) {
 //		g1();
 		g2();

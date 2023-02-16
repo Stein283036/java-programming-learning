@@ -1,4 +1,4 @@
-package generics;
+package com.guhe.generics;
 
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -9,7 +9,7 @@ import java.util.List;
  * @author njl
  * @date 2023/1/29
  */
-public class GenericsApp {
+public class Generics1App {
 	public static void main(String[] args) {
 //		generics1();
 //		generics2();
@@ -134,6 +134,11 @@ class Pair<T> {
 	private T first;
 	private T last;
 
+	public Pair(Class<T> cls) throws InstantiationException, IllegalAccessException {
+		first = cls.newInstance();
+		last = cls.newInstance();
+	}
+
 	public Pair(T first, T last) {
 		this.first = first;
 		this.last = last;
@@ -146,6 +151,12 @@ class Pair<T> {
 	public T getLast() {
 		return last;
 	}
+
+	// 'equals(T)' in 'com.guhe.generics.Pair' clashes with 'equals(Object)' in 'java.lang.Object';
+	// both methods have same erasure, yet neither overrides the other
+//	public boolean equals(T t) {
+//		return this == t;
+//	}
 }
 
 class IntPair extends Pair2<Integer> {

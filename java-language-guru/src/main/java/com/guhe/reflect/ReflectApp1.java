@@ -1,4 +1,4 @@
-package reflect;
+package com.guhe.reflect;
 
 import java.io.Serializable;
 import java.lang.annotation.Annotation;

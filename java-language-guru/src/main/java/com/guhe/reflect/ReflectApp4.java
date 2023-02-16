@@ -1,4 +1,4 @@
-package reflect;
+package com.guhe.reflect;
 
 import java.io.Closeable;
 import java.lang.annotation.ElementType;
