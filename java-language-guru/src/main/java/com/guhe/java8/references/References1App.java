@@ -6,7 +6,7 @@ import com.guhe.java8.lambda.Converter;
  * @author njl
  * @date 2023/2/13
  */
-public class ReferencesApp {
+public class References1App {
 	public static void main(String[] args) {
 		r1();
 	}

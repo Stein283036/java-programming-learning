@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Consumer;
+import java.util.function.Predicate;
 
 /**
  * @author njl
@@ -17,7 +19,24 @@ public class Lambda1App {
 //		l1();
 //		l2();
 //		l3();
-		l4();
+//		l4();
+		l6();
+	}
+
+	public static void l6() {
+		Consumer<String> c1 = str -> System.out.println(str);
+		Consumer<String> c2 = c1.andThen((Object obj) -> System.out.println(obj));
+		c2.accept("HelloWorld");
+		Predicate<String> predicate = s -> s.length() == 3;
+		boolean hello = predicate.test("Hello");
+		boolean abc = predicate.test("abc");
+		System.out.println("abc = " + abc);
+		System.out.println("hello = " + hello);
+		int totalPrice = 0;
+		Consumer<String> c3 = str -> {
+//			totalPrice+=2; // lambda 的抽象方法实现体中无法修改外部的局部变量，因为作用域和值传递的因素
+		};
+//		totalPrice = 2;
 	}
 
 	public void l5() { // Accessing fields and static variables
