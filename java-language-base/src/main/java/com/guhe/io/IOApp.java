@@ -37,7 +37,7 @@ public class IOApp {
 	 * 基于字节流读取二进制文件（音频、视频、图片等）
 	 */
 	public static void io4() {
-		try (FileInputStream fis = new FileInputStream("D:\\JavaProjects\\java-programming-learning\\java-language-base\\src\\main\\java\\com\\guhe\\io\\img.png");
+		try (FileInputStream fis = new FileInputStream("D:\\JavaProjects\\java-programming-learning\\java-language-base\\src\\main\\java\\com\\guhe\\io\\Queue Hierarchy.png");
 		     FileOutputStream fos = new FileOutputStream("D:\\JavaProjects\\java-programming-learning\\java-language-base\\src\\main\\java\\com\\guhe\\io\\img Copy.png")) {
 			byte[] buffer = new byte[2048];
 			int readCount;
