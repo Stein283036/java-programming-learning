@@ -7,7 +7,7 @@ import java.util.Scanner;
  * @author njl
  * @date 2023/1/28
  */
-public class IOApp {
+public class IO1App {
 	public static void main(String[] args) {
 //		io1();
 //		io2();

@@ -1,0 +1,1 @@
+The class String includes methods for examining individual characters of the sequence, for comparing strings,
