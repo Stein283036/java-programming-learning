@@ -26,7 +26,7 @@ public class IO2App {
 		// x formats an integer as a hexadecimal value.
 		// s formats any value as a string.
 		// Except for %% and %n, all format specifiers must match an argument. If they don't, an exception is thrown.
-		// In the Java programming language, the \n escape always generates the linefeed character (\u000A).
+		// In the Java programming language, the \n escape always generates the linefeed character
 		// Don't use \n unless you specifically want a linefeed character. To get the correct line separator for the local platform, use %n.
 		System.out.format("%% The square of %d is %f.%n", i, r);
 	}
