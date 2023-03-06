@@ -1,12 +1,16 @@
 package com.guhe.java8.streams;
 
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.List;
+import java.util.Random;
 import java.util.Spliterator;
 import java.util.Spliterators;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
-import java.util.stream.StreamSupport;
+import java.util.function.Supplier;
+import java.util.stream.*;
 
 /**
  * Creating Streams
@@ -16,7 +20,48 @@ import java.util.stream.StreamSupport;
  */
 public class Stream4App {
 	public static void main(String[] args) {
-		s1();
+//		s1();
+//		s2();
+//		s3();
+		s4();
+	}
+
+	public static void s7() throws IOException { // Stream of File
+		Path path = Paths.get("C:\\file.txt");
+		try (
+				Stream<String> streamOfStrings = Files.lines(path);
+				Stream<String> streamWithCharset =
+						Files.lines(path, StandardCharsets.UTF_8);
+		) {
+
+		}
+	}
+
+	public static void s6() { // Stream of String
+		IntStream chars = "string".chars();
+	}
+
+	public static void s5() { // Stream of primitive
+		IntStream intStream = IntStream.range(1, 3);
+		LongStream longStream = LongStream.rangeClosed(1, 3);
+		DoubleStream ds = new Random().doubles(3);
+	}
+
+	public static void s4() { // Stream.iterate()
+		List<String> list = Stream.iterate("*", t -> t.concat("*")).limit(5).collect(Collectors.toList());
+		System.out.println("list = " + list);
+	}
+
+	public static void s3() { // Stream.generate()
+		Supplier<User> userSupplier = User::new;
+		long count = Stream.generate(userSupplier).limit(10).count();
+		System.out.println("count = " + count);
+	}
+
+	public static void s2() { // Stream.builder()
+		Stream<String> stream = Stream.<String>builder().add("a").add("b").add("c").build();
+		List<String> list = stream.map(String::toUpperCase).collect(Collectors.toList());
+		System.out.println("list = " + list); // list = [A, B, C]
 	}
 
 	public static void s1() { // Creating a Stream

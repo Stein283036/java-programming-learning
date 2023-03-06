@@ -29,7 +29,14 @@ public class Streams3App {
 //		s6();
 //		s7();
 //		s8();
-		s9();
+//		s9();
+		s10();
+	}
+
+	public static void s10() {
+		List<String> list = Stream.of("Anna Leo", "Jame Leo", "Curr Leo").map(s -> s.substring(0, 4)).collect(Collectors.toList());
+		// list = [Anna, Jame, Curr]
+		System.out.println("list = " + list);
 	}
 
 	public static void s9() { // Debugging Streams
@@ -155,6 +162,9 @@ public class Streams3App {
 
 class User {
 	private Long salary;
+
+	public User() {
+	}
 
 	public Long getSalary() {
 		return salary;
