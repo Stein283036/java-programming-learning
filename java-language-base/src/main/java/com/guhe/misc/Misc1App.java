@@ -4,7 +4,7 @@ package com.guhe.misc;
  * @author njl
  * @date 2023/1/29
  */
-public class MiscApp {
+public class Misc1App {
 	public static void main(String[] args) {
 //		misc3();
 //		misc4();
