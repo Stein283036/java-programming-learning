@@ -145,9 +145,6 @@ public class Misc3App {
 		for (int i = 0; i < 5; i++) {
 			System.out.print(supplier.get() + " ");
 		}
-		int i = 12;
-		Integer integer = i;
-
 	}
 
 	public static void misc1() {

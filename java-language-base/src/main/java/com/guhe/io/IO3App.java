@@ -213,7 +213,6 @@ public class IO3App {
 		) {
 			int length = 0;
 			byte[] buffer = new byte[1024];
-			StringBuilder sb = new StringBuilder();
 			while ((length = bis.read(buffer)) != -1) {
 				System.out.println(new String(buffer, 0, length)); // Learn Java IO API
 			}

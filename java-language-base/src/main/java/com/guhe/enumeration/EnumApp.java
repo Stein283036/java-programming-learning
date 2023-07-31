@@ -6,8 +6,8 @@ package com.guhe.enumeration;
  */
 public class EnumApp {
 	public static void main(String[] args) {
-//		enum1();
-//		enum2();
+		enum1();
+		enum2();
 	}
 
 	public static void enum2() {

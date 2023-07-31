@@ -8,9 +8,7 @@ package com.guhe.operator;
  */
 public class OperatorApp {
 	public static void main(String[] args) {
-//		bitOperator();
-//		assignmentOperator();
-		shiftOperator();
+		bitOperator();
 	}
 
 	public static void bitOperator() {
@@ -39,69 +37,5 @@ public class OperatorApp {
 		// >>操作对左边空位补符号位，>>>对左边空位补0
 		System.out.println(Integer.toBinaryString(a >>> 2));
 		System.out.println(a >>> 2); // 0000 1111 - 15
-	}
-
-	public static void shiftOperator() {
-		// byte、short、int 类型的右移操作都是先将左操作数转换为int类型，然后执行右移操作，结果也是int类型
-		// long 类型的右移操作并没有对左操作数进行类型转换，结果也是 long 类型
-		// >> 操作对左边空位补符号位，>>> 对左边空位补 0
-		byte b = -1;
-		short s = -1;
-		int i = -1;
-		long l = -1;
-		System.out.println("byte b = " + b);
-		System.out.println("(b >> 1) = " + (b >> 1));
-		System.out.println("(b >>> 1) = " + (b >>> 1));
-		System.out.printf("hexof (b >> 1) = %x%n", (b >> 1));
-		System.out.printf("hexof (b >>> 1) = %x%n", (b >>> 1));
-		System.out.println("short s = " + s);
-		System.out.println("(s >> 1) = " + (s >> 1));
-		System.out.println("(s >>> 1) = " + (s >>> 1));
-		System.out.printf("hexof (s >> 1) = %x%n", (s >> 1));
-		System.out.printf("hexof (s >>> 1) = %x%n", (s >>> 1));
-		System.out.println("int i = " + i);
-		System.out.println("(i >> 1) = " + (i >> 1));
-		System.out.println("(i >>> 1) = " + (i >>> 1));
-		System.out.printf("hexof (i >> 1) = %x%n", (i >> 1));
-		System.out.printf("hexof (i >>> 1) = %x%n", (i >>> 1));
-		System.out.println("long l = " + l);
-		System.out.println("(l >> 1) = " + (l >> 1));
-		System.out.println("(l >>> 1) = " + (l >>> 1));
-		System.out.printf("hexof (l >> 1) = %x%n", (l >> 1));
-		System.out.printf("hexof (l >>> 1) = %x%n", (l >>> 1));
-	}
-
-	public static void assignmentOperator() {
-		int a = 10;
-		int b = 20;
-		int c = 0;
-		c = a + b;
-		System.out.println("c = a + b = " + c);
-		c += a;
-		System.out.println("c += a  = " + c);
-		c -= a;
-		System.out.println("c -= a = " + c);
-		c *= a;
-		System.out.println("c *= a = " + c);
-		a = 10;
-		c = 15;
-		c /= a;
-		System.out.println("c /= a = " + c);
-		a = 10;
-		c = 15;
-		c %= a;
-		System.out.println("c %= a  = " + c);
-		c <<= 2;
-		System.out.println("c <<= 2 = " + c);
-		c >>= 2;
-		System.out.println("c >>= 2 = " + c);
-		c >>= 2;
-		System.out.println("c >>= 2 = " + c);
-		c &= a;
-		System.out.println("c &= a  = " + c);
-		c ^= a;
-		System.out.println("c ^= a   = " + c);
-		c |= a;
-		System.out.println("c |= a   = " + c);
 	}
 }

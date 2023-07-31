@@ -73,7 +73,7 @@ public class ExceptionApp {
 		}
 	}
 
-	public static void e1() throws FileNotFoundException /* 编译期异常（受检异常，不处理程序无法通过编译） */ {
+	public static void e1() throws FileNotFoundException  /* 编译期异常（受检异常，不处理程序无法通过编译） */ {
 		FileInputStream fis = new FileInputStream("D:\\JavaProjects\\java-programming-learning\\java-language-base\\src\\main\\java\\com\\guhe\\exception\\ExceptionApp.java");
 	}
 }

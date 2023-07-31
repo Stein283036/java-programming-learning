@@ -6,6 +6,7 @@ package com.guhe.misc;
  */
 public class Misc1App {
 	public static void main(String[] args) {
+		misc1();
 //		misc3();
 //		misc4();
 //		misc5();

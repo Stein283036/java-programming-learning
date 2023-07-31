@@ -15,7 +15,7 @@ public class RMIServerApp {
 	public static void main(String[] args) throws RemoteException, AlreadyBoundException {
 		System.out.println("正在创建 WorldClock 服务");
 		WorldClock worldClock = new WorldClockImpl();
-		// 将这个远程对象暴露在指定的端口上，以便接收已将到来的调用
+		// 将这个远程对象暴露在指定的端口上，以便接收即将到来的调用
 		Remote worldClockStub = UnicastRemoteObject.exportObject(worldClock, 2000);
 		// 创建并暴露一个注册实例 接收本机的1099端口的请求
 		Registry registry = LocateRegistry.createRegistry(1099);

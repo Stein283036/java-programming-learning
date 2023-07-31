@@ -78,7 +78,7 @@ public class CalendarApp {
 	public static void calendar2() {
 		Calendar instance = Calendar.getInstance(TimeZone.getDefault(), Locale.getDefault());
 		// 设置日期时间
-		instance.set(2000, 4, 28, 12, 30, 55);
+		instance.set(2000, Calendar.MAY, 28, 12, 30, 55);
 		Date birthday = instance.getTime();
 		System.out.println("time = " + birthday);
 	}
