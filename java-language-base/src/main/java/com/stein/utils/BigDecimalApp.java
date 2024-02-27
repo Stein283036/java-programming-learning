@@ -10,9 +10,9 @@ import java.util.Arrays;
  */
 public class BigDecimalApp {
     public static void main(String[] args) {
-//		bigdecimal1();
-//		bigdecimal3();
-//		bigdecimal4();
+		bigdecimal1();
+		bigdecimal3();
+		bigdecimal4();
         bigdecimal5();
     }
 

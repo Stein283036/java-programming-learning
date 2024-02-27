@@ -71,7 +71,7 @@ public class IO3App {
             e.printStackTrace();
         }
 
-        // ObjectOutputStream
+        // ObjectInputStream
         try (
                 ObjectInputStream ois = new ObjectInputStream(
                         Files.newInputStream(path)

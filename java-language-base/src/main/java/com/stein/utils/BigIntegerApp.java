@@ -10,7 +10,6 @@ public class BigIntegerApp {
     public static void main(String[] args) {
 //		biginteger1();
         biginteger2();
-
     }
 
     public static void biginteger2() {

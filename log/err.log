@@ -4,3 +4,6 @@ this is an error message
 07-31 14:03:33.570 [main] ERROR com.guhe.log.CommonsLoggingApp
 this is an error message
 
+02-27 09:47:50.016 [main] ERROR com.stein.log.CommonsLoggingApp
+this is an error message
+

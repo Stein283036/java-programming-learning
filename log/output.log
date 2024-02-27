@@ -1,2 +1,4 @@
 00:06:32.709 [main] INFO  com.stein.log.LogbackApp - this is an INFO message
 00:06:32.711 [main] ERROR com.stein.log.LogbackApp - this is an ERROR message
+09:51:57.431 [main] INFO  com.stein.log.LogbackApp - this is an INFO message
+09:51:57.433 [main] ERROR com.stein.log.LogbackApp - this is an ERROR message

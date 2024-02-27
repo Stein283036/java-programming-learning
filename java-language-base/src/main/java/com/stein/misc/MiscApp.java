@@ -10,8 +10,10 @@ public class MiscApp {
 //		misc4();
 //		misc5();
 //		misc6();
-//		misc7();
+//        misc7();
         misc8();
+//        misc1();
+//        misc2();
     }
 
     /**
@@ -62,6 +64,7 @@ public class MiscApp {
 
     public static void misc5() {
         double d = 12900000;
+        // double d = 1.29E7;
         System.out.println(d); // 1.29E7
     }
 
@@ -85,14 +88,18 @@ public class MiscApp {
     public static void misc2() {
         // 要显示一个字符的Unicode编码，只需将char类型直接赋值给int类型即可
         int n1 = 'A'; // 字母“A”的Unicode编码是65
+        System.out.println("n1 = " + n1);
         int n2 = '中'; // 汉字“中”的Unicode编码是20013
+        System.out.println("n2 = " + n2);
         // 可以直接用转义字符\ u+Unicode编码来表示一个字符
         char c3 = '\u0041'; // 'A'，因为十六进制0041 = 十进制65
+        System.out.println("c3 = " + c3);
         char c4 = '\u4e2d'; // '中'，因为十六进制4e2d = 十进制20013
+        System.out.println("c4 = " + c4);
     }
 
     public static void misc1() {
-        double d1 = 0.0 / 0; // NaN
+        double d1 = 0.0d / 0; // NaN
         System.out.println("d1 = " + d1);
         double d2 = 1.0 / 0; // Infinity
         System.out.println("d2 = " + d2);

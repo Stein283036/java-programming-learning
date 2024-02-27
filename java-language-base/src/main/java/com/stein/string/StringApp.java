@@ -11,6 +11,8 @@ import java.util.Arrays;
 public class StringApp {
     public static void main(String[] args) throws UnsupportedEncodingException {
 //		str1();
+//        str2();
+//        str3();
 //		str5();
 //		str8();
 //		str9();
@@ -131,12 +133,12 @@ public class StringApp {
         String s1 = "a" + "b" + "c"; // 编译器的常量优化 s1 = "abc",也叫做常量折叠
         String s2 = "abc";
         System.out.println(s1 == s2); // true
-        System.out.println(s1.equals(s2)); // false
+        System.out.println(s1.equals(s2)); // true
     }
 
     public static void str3() {
-        String s1 = "ab";
-        // final String s1 = "ab";
+//        String s1 = "ab";
+        final String s1 = "ab";
         String s2 = "abc";
         String s3 = s1 + "c";
         // s1是变量,因此编译器无法优化,实际执行的是StringBuilder的append方法拼接s1对象和字符串"c",

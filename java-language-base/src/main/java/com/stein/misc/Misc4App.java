@@ -1,10 +1,7 @@
-package com.guhe.misc;
+package com.stein.misc;
 
 import java.util.*;
-import java.util.function.Consumer;
-import java.util.function.Function;
-import java.util.function.Predicate;
-import java.util.function.Supplier;
+import java.util.function.*;
 import java.util.logging.Logger;
 
 /**
@@ -13,8 +10,10 @@ import java.util.logging.Logger;
  */
 public class Misc4App {
 	public static void main(String[] args) {
+//		misc1();
+//		misc2();
 //		misc3();
-		misc4();
+//		misc4();
 		misc5();
 	}
 
@@ -55,17 +54,24 @@ public class Misc4App {
 	public static void misc2() {
 		// unbound method references
 		Predicate<String> nonNull = Objects::nonNull;
-		Predicate<String> nonEmpty = String::isEmpty;
+		Predicate<String> empty = String::isEmpty;
+		Predicate<String> nonEmpty = empty.negate();
 		Predicate<String> shorterThan5 = s -> s.length() < 5;
 		Predicate<String> predicate = nonNull.and(nonEmpty).and(shorterThan5);
+		System.out.println(predicate.test(""));
+		System.out.println(predicate.test(null));
+		System.out.println(predicate.test("love"));
+		System.out.println(predicate.test("destiny"));
 	}
 
 	public static void misc1() {
-		// DoubleUnaryOperator sqrt = num -> Math.sqrt(num);
-		// DoubleUnaryOperator sqrt = Math::sqrt;
+//		 DoubleUnaryOperator sqrt = num -> Math.sqrt(num);
+		 DoubleUnaryOperator sqrt = Math::sqrt;
+		double result = sqrt.applyAsDouble(16);
+		System.out.println("result = " + result);
 
-		// IntBinaryOperator max = (a, b) -> Math.max(a,b);
-		// IntBinaryOperator max = Math::max;
+//		 IntBinaryOperator max = (a, b) -> Math.max(a,b);
+		 IntBinaryOperator max = Math::max;
 		Supplier<List<String>> newListOfStrings = ArrayList::new;
 		Function<Integer, List<String>> newListOfNStrings = ArrayList::new;
 		List<String> list = newListOfNStrings.apply(10);

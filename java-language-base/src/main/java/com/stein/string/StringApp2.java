@@ -11,8 +11,8 @@ public class StringApp2 {
     public static void main(String[] args) {
 //		str1();
         str2();
-        System.out.println(int.class);
-        System.out.println(Integer.class);
+//        System.out.println(int.class);
+//        System.out.println(Integer.class);
     }
 
     public static void str2() {
@@ -29,12 +29,12 @@ public class StringApp2 {
     }
 
     /**
-     * 字符串存储在 Java 的方法去中（逻辑概念），JDK 6以前，方法区用永久代实现，JDK 7 方法区移到堆内存中，JDK 8 彻底
+     * 字符串存储在 Java 的方法区中（逻辑概念），JDK 6以前，方法区用永久代实现，JDK 7 方法区移到堆内存中，JDK 8 彻底
      * 移除永久代，用元空间替代。
      */
     public static void str1() {
         //使用Set保持着常量池引用，避免full gc回收常量池行为
-        Set<String> set = new HashSet<String>();
+        Set<String> set = new HashSet<>();
         //取值的范围内足以让6MB的PermSize或heap产生OOM了。
         long i = 0;
         while (true) {

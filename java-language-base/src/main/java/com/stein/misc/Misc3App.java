@@ -1,4 +1,4 @@
-package com.guhe.misc;
+package com.stein.misc;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -14,7 +14,7 @@ public class Misc3App {
 	public static void main(String[] args) {
 //		misc1();
 //		misc2();
-//		misc3();
+		misc3();
 //		misc4();
 //		misc5();
 //		misc6();
@@ -26,8 +26,8 @@ public class Misc3App {
 //		misc12();
 //		misc13();
 //		misc14();
-//		misc15();
-		misc16();
+		misc15();
+//		misc16();
 	}
 
 	public static void misc16() {
@@ -80,6 +80,7 @@ public class Misc3App {
 	}
 
 	public static void misc9() {
+//		IntPredicate isGreaterThan10 = i -> i > 10;
 		IntPredicate isGreaterThan10 = i -> i > 10;
 		boolean res1 = isGreaterThan10.test(11);
 		System.out.println("res1 = " + res1);
@@ -97,8 +98,8 @@ public class Misc3App {
 
 	public static void misc7() {
 		List<String> list = Arrays.asList("费德勒", "纳达尔", "德约科维奇");
-		Consumer<String> printer = System.out::println;
-		list.forEach(printer);
+		Consumer<String> consumer = System.out::println;
+		list.forEach(consumer);
 	}
 
 	public static void misc6() {
@@ -122,6 +123,7 @@ public class Misc3App {
 	public static void misc4() {
 		Random random = new Random(314L);
 		IntSupplier intSupplier = () -> random.nextInt(10);
+//		Consumer<String> consumer = System.out::println;
 		Consumer<String> consumer = System.out::println;
 		for (int i = 0; i < 5; i++) {
 			int nextRandom = intSupplier.getAsInt();
@@ -148,7 +150,8 @@ public class Misc3App {
 	}
 
 	public static void misc1() {
-		Supplier<String> supplier = () -> "WHEN I CARE ABOUT YOU";
+//		Supplier<String> supplier = () -> "WHEN I CARE ABOUT YOU";
+		Supplier<String> supplier = () -> "当我想你的时候";
 		String s = supplier.get();
 		System.out.println("s = " + s);
 	}
